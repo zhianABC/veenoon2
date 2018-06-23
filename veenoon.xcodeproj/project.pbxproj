@@ -3764,7 +3764,7 @@
 				TargetAttributes = {
 					04DE1DD11AD68C5E00D49E2F = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = ES8777A4V4;
+						DevelopmentTeam = 9FDG53LV84;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
@@ -4788,10 +4788,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: JingLong Zhou (B4CA7N586P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: JingLong Zhou (B4CA7N586P)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: AS-CN (Beijing) Co., Ltd.";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ES8777A4V4;
+				DEVELOPMENT_TEAM = 9FDG53LV84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4809,9 +4809,10 @@
 					"$(PROJECT_DIR)/RegSDK",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sz1.veenoon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sz.veenoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = DevTest;
+				PROVISIONING_PROFILE = "a541cb78-affc-487e-9b13-2700b44a0eff";
+				PROVISIONING_PROFILE_SPECIFIER = veenoon;
 				SWIFT_OBJC_BRIDGING_HEADER = "veenoon/Engineer/Audio/RIghtView/AudioProcess/veenoon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -4824,10 +4825,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: JingLong Zhou (B4CA7N586P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: JingLong Zhou (B4CA7N586P)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: AS-CN (Beijing) Co., Ltd.";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ES8777A4V4;
+				DEVELOPMENT_TEAM = 9FDG53LV84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4845,10 +4846,10 @@
 					"$(PROJECT_DIR)/RegSDK",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sz1.veenoon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sz.veenoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "65150119-c696-47fe-8dad-d96518b8acbb";
-				PROVISIONING_PROFILE_SPECIFIER = DevTest;
+				PROVISIONING_PROFILE = "a541cb78-affc-487e-9b13-2700b44a0eff";
+				PROVISIONING_PROFILE_SPECIFIER = veenoon;
 				SWIFT_OBJC_BRIDGING_HEADER = "veenoon/Engineer/Audio/RIghtView/AudioProcess/veenoon-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
