@@ -24,6 +24,10 @@
     UILabel *fazhiL;
     UILabel *huifushijianL;
     UILabel *qidongshijianL;
+    
+    FilterGraphView *fglm;
+    
+    int _channelSelIndex;
 }
 
 @property (nonatomic, strong) NSMutableArray *_boduanChannelBtns;
@@ -78,9 +82,11 @@
         
         
         rc = CGRectMake(10, 20, frame.size.width-20, 260);
-        FilterGraphView *lm = [[FilterGraphView alloc] initWithFrame:rc];
-        lm.backgroundColor = [UIColor clearColor];
-        [self addSubview:lm];
+        fglm = [[FilterGraphView alloc] initWithFrame:rc];
+        fglm.backgroundColor = [UIColor clearColor];
+        [self addSubview:fglm];
+        
+        //[fglm drawRect:CGRectZero];
         
         
     }
@@ -215,6 +221,8 @@
     int bw = 40;
     int bh = 25;
     
+    _channelSelIndex = 0;
+    
     float spx = (view.frame.size.width - bw * 8 - x *2)/7;
     if(spx > 10)
         spx = 10;
@@ -327,6 +335,8 @@
     qidongshijian.tag = 4;
     [view addSubview:qidongshijian];
     
+    [qidongshijian setCircleValue:0.5];
+    
     qidongshijianL = [[UILabel alloc] initWithFrame:CGRectMake(startX+gap, labelY+labelBtnGap+95, 120, 20)];
     qidongshijianL.text = @"-12dB";
     qidongshijianL.textAlignment = NSTextAlignmentCenter;
@@ -384,15 +394,21 @@
         
         xielvL2.text = valueStr;
     } else if (tag == 3) {
-        int k = (value *24)-12;
-        NSString *valueStr= [NSString stringWithFormat:@"%dB", k];
+        int k = (value *(10000-10))-10;
+        
+        NSString *valueStr= [NSString stringWithFormat:@"%dHz", k];
         
         fazhiL.text = valueStr;
+        
+        
     } else if (tag == 4) {
-        int k = (value *2000)-1000;
+        int k = (value *40)-20;
         NSString *valueStr= [NSString stringWithFormat:@"%d", k];
         
         qidongshijianL.text = valueStr;
+        
+        [fglm setPEQWithBand:_channelSelIndex gain:k];
+        
     } else {
         int k = (value *2000)-1000;
         NSString *valueStr= [NSString stringWithFormat:@"%d", k];
@@ -528,6 +544,8 @@
 }
 
 - (void) boduanChannelBtnAction:(UIButton*)sender{
+    
+    _channelSelIndex = (int)sender.tag;
     
     for(UIButton * btn in _boduanChannelBtns)
     {
